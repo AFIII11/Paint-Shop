@@ -1,0 +1,21 @@
+
+.boxm{max-width: 500px;
+    padding: 100px 50px 100px 50px !important;
+    background-color: rgb(255, 254, 254) rgb(0, 0, 0) !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: auto !important;
+    margin-top: 30px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    text-align: center;}
+    
+
+
+   
+    .container{
+      padding-top: 100px;
+    }
+    
+    

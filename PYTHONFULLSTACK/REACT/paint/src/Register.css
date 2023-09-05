@@ -1,0 +1,68 @@
+h2{
+    color: rgb(3, 3, 3);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 100px;
+    font-weight: bolder;
+   
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    color: rgb(8, 8, 8);
+}
+.col1{
+    width: 100px;
+    /* background-color: aqua; */
+    text-align: left;
+    margin-right: 10px;
+}
+.col2{
+    width: 300px;
+    padding: 10px;
+}
+.one{
+    width: 75%;
+    margin-bottom: 20px;
+}
+input[type="submit"]{
+    margin: 0 auto ;
+    display: block;
+    
+}
+.bigs{
+    text-align: center;
+    height: 100vh;
+}
+.small{
+    display: inline-block;
+    background-color: rgb(5, 5, 5) rgb(0, 0, 0) !important;
+    width: 75%;
+    max-width: 1000px;
+    min-height: 500px;    margin-top: 50px;
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background: 
+    repeating-radial-gradient(
+      circle at 0 0, 
+      rgb(200, 198, 201) , rgb(255, 255, 255));
+      position: relative;
+      top: 100px;
+    
+}
+
+.bt{
+    background-color: rgb(118, 101, 101);
+    border-radius: 4px;
+    font-size: large;
+    font-weight: bolder;
+}
+.bt:hover{
+    color: rgb(241, 242, 241);
+}
+.col1 > h4{
+    margin-bottom: 19px;
+}

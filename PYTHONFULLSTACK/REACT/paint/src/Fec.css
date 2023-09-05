@@ -1,0 +1,30 @@
+body{
+    background:linear-gradient(to right, rgb(200, 198, 201) , rgb(255, 255, 255));
+
+}
+.card{background-color: rgb(200, 198, 201) !important;
+    border-radius: 10px !important;
+    transition: .5s ease !important;
+    border: .10rem solid #1f242d;
+    size: 10px !important;
+    box-shadow: rgba(0, 0, 0, 0.395) 3px 4px;
+}
+    
+.card:hover{
+    background-color: #302244;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    height: px;
+    margin: 20px auto;
+    width: 200px;
+  }
+
+.card-img-top{
+    width: 200px !important;
+    
+}
+.card-deck{
+    position: relative;
+    top: 100px;
+}

@@ -1,0 +1,18 @@
+body{
+    background:linear-gradient(to right, rgb(200, 198, 201) , rgb(255, 255, 255));
+
+}
+h3{
+    padding-top: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+    text-shadow: rgba(0, 0, 0, 0.701) 4px 4px;
+    color:rgb(200, 198, 201);
+    
+}
+h5{
+    padding-left: 280px;
+    text-shadow: grey 2px 2px !important;
+}
+

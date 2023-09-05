@@ -1,0 +1,44 @@
+h1{
+    color: rgb(0, 0, 0);
+    
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+label{
+    color: rgb(7, 7, 7);
+    font-weight: bolder;
+}
+
+    
+.box{
+    
+   
+    margin: auto !important;
+    align-items: center !important;
+    max-width: 500px;
+    padding: 100px 50px 100px 50px !important;
+    justify-content: center !important;
+    background: 
+    repeating-radial-gradient(
+      circle at 0 0, 
+      rgb(200, 198, 201) , rgb(255, 255, 255));
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 30px;
+    border: 1px solid;
+    background-color: rgb(255, 254, 254) rgb(0, 0, 0) !important;
+    position: relative;
+    top: 150px;
+    text-align: center;
+
+}
+
+.but{
+    background-color: rgb(118, 101, 101);
+    border-radius: 4px;
+    font-size: large;
+    font-weight: bolder;
+}
+.but:hover{
+    color: rgb(253, 249, 249);
+}

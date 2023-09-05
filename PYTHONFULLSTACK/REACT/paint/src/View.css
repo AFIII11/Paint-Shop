@@ -1,0 +1,9 @@
+.table{
+    background-color: rgb(250, 249, 249);
+    color: rgb(6, 6, 6) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+td{
+    font-weight:bolder;
+}

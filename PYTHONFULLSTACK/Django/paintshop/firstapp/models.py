@@ -13,6 +13,8 @@ class register(models.Model):
     email=models.CharField(max_length=30)
     user_status=models.CharField(max_length=30)
     log_id=models.ForeignKey(login,on_delete=models.CASCADE)
+    modelfile=models.ImageField(upload_to='images/',null=True)
+    
 
 class products(models.Model):
     name=models.CharField(max_length=30)

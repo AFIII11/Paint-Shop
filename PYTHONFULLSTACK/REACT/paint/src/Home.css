@@ -11,7 +11,7 @@ h3{
     color:rgb(200, 198, 201);
     
 }
-h5{
+.container >h5{
     padding-left: 280px;
     text-shadow: grey 2px 2px !important;
 }

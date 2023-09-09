@@ -11,7 +11,7 @@ export default function Registration() {
     password:'',
     password:''
   })
-
+console.log(input);
 
   const inputChange=(event)=>{
   const{name,value}=event.target
@@ -46,6 +46,7 @@ export default function Registration() {
           <input type="username" class="one" placeholder='Enter Your Username' name='username' onChange={inputChange}/>
           <input type="password" class="one" placeholder='Enter Your Password' name='password' onChange={inputChange}/>
           <input type="tel" class="one" placeholder='Enter Your Phone Number' name='Phone_Number' onChange={inputChange}/>
+          <input type="file" class="one" placeholder=''  name='file' onChange={(e)=>{setInput({...input,'file':e.target.files})}}/>
         </div>
       </div>
       <div class="col3">

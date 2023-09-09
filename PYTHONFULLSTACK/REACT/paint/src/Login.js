@@ -24,6 +24,7 @@ const submit=()=>{
     localStorage.setItem('username',JSON.stringify(response.data.data.username))
     localStorage.setItem('userid',JSON.stringify(response.data.data.user_id))
     localStorage.setItem('role',response.data.data.role)
+    localStorage.setItem('user_data',response.data.data.user_id)
     console.log(response);
     console.log(input);
     if(response.data.data.role=='admin'){

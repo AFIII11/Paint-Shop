@@ -9,6 +9,8 @@ import Color from './Color';
 import Fec from './Fec';
 import Form from './Form';
 import View from './View';
+import Editpaint from './Editpaint';
+import Profile from './Profile';
 
 
 
@@ -25,6 +27,9 @@ function App() {
     <Route path='/fec'element={<Fec></Fec>}/>  
     <Route path='/form'element={<Form></Form>}/>  
     <Route path='/view'element={<View></View>}/>  
+    <Route path='/edit/:id'element={<Editpaint/>}/>  
+    <Route path='/profile'element={<Profile></Profile>}/>  
+    
     
       
       

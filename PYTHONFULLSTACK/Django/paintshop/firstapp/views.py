@@ -29,6 +29,7 @@ class UserRegisterSerializerAPIView(GenericAPIView):
         Phone_Number=request.data.get('Phone_Number')
         username=request.data.get('username')
         password=request.data.get('password')
+        modelfile=request.data.get('modelfile')
         role='user'
         userstatus='0'
         if(login.objects.filter(username=username)):
@@ -41,7 +42,7 @@ class UserRegisterSerializerAPIView(GenericAPIView):
             log=serializer_login.save()
             login_id=log.id
             print(login_id)
-        serializer=self.serializer_class_register(data={'name':Name,'email':Email,'contact':Phone_Number,'log_id':login_id,'user_status':userstatus})    
+        serializer=self.serializer_class_register(data={'name':Name,'email':Email,'contact':Phone_Number,'log_id':login_id,'user_status':userstatus,'modelfile':modelfile})    
         print(serializer)
         if serializer.is_valid():
             serializer.save()
@@ -124,6 +125,23 @@ class Deleteproduct(GenericAPIView):
       queryset=products.objects.get(pk=id)
       queryset.delete()
       return Response({'message':'Deleted   Successfully','success':False},status=status.HTTP_201_CREATED)
+class Editproduct(GenericAPIView):
+   def get(self,request,id):
+      queryset=products.objects.filter(pk=id).values()
+      return Response({'data':queryset,'message':'Edited  Successfully','success':False},status=status.HTTP_200_OK)
+
+class Update_product(GenericAPIView):
+        serializer_class=AddProductSerializer
+        def put(self,request,id):
+            queryset=products.objects.get(pk=id)
+            print(queryset)
+            serializer=AddProductSerializer(instance=queryset,data=request.data,partial=True)
+            print(serializer)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({'data':serializer.data,'message':'updated succesfully','success':True},)
+            else:
+                return Response({'data':'something went wrong','success':False},status=status.HTTP_400_BAD_REQUEST)
 
  
            

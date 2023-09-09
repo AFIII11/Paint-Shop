@@ -1,0 +1,54 @@
+.profbox{
+    display: flex;
+    height: 100vh;
+}
+.profirstbox{
+    width: 350px;
+    border-right: 1px solid rgb(216, 210, 210);
+    width: 30vw;
+    background-color: rgba(130, 42, 4, 0.719);
+    color: white;
+
+}
+h4{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px rgb(216, 210, 210) solid;
+}
+i{
+    font-size: 20px !important;
+}
+.secprofibox{
+    background-color: whitesmoke;
+    width: 80vw ;
+    height: 100vh;
+    padding-top: 100px;
+    
+
+}
+
+.secprofibox > img{
+    width: 150px;
+    margin-left: 150px;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+.formbox{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.profile{
+color: rgb(6, 6, 6);
+font-weight: bolder !important;
+border-radius: 5px ;
+background-color: rgba(130, 42, 4, 0.719);
+
+}
+.imge{
+    width: 180px !important;
+    height: 180px !important;
+}
+.profile:hover{
+    color: rgb(217, 224, 218);
+}
+

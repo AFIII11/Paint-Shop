@@ -47,6 +47,8 @@ export default function Nav() {
       <li class="nav-item">
         <a class="nav-link  text-dark" href="/View">View</a>
       </li>
+      
+     
     </ul>
   </div>
 </nav>
@@ -65,13 +67,16 @@ export default function Nav() {
         <a class="nav-link text-dark" href="/">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-dark" onClick={logout}>logout<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-dark"  onClick={logout}>logout<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-dark" href="/Color">Paint And Colors</a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-dark" href="/Fec">Fecilities</a>  
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-dark" href="/profile">Profile</a>  
       </li>
     </ul>
   </div>

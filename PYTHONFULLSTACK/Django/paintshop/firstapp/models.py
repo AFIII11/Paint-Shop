@@ -13,7 +13,7 @@ class register(models.Model):
     email=models.CharField(max_length=30)
     user_status=models.CharField(max_length=30)
     log_id=models.ForeignKey(login,on_delete=models.CASCADE)
-    modelfile=models.ImageField(upload_to='images/',null=True)
+    image=models.ImageField(upload_to='images/',null=True)
     
 
 class products(models.Model):
@@ -22,3 +22,11 @@ class products(models.Model):
     brands=models.CharField(max_length=30)
     contact=models.CharField(max_length=30)
     color=models.CharField(max_length=30)
+
+
+class contact(models.Model):
+    fname=models.CharField(max_length=30)    
+    lname=models.CharField(max_length=30)    
+    contact=models.CharField(max_length=30)    
+    email=models.CharField(max_length=30)    
+    message=models.CharField(max_length=30)    

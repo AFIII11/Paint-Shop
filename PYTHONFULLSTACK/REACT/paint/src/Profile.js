@@ -5,7 +5,7 @@ import byoy from './Img/byoy.jpg';
 
 export default function Profile() {
     const[state,setState]=useState((localStorage.getItem('user_data')) || {})
-    const[input,setInput8]=useState("")
+    const[input,setInput]=useState("")
     console.log(state);
     const id=state
     useEffect

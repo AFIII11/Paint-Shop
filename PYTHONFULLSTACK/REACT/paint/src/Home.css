@@ -15,4 +15,34 @@ h3{
     padding-left: 280px;
     text-shadow: grey 2px 2px !important;
 }
+.contact h2{margin-top: 3rem;}
+.contact form{
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;}
+    .contact form .input-box{display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;}
+        .contact form .input-box input,.contact form textarea{
+        width: 100%;
+        padding: .2rem;
+        font-size: 1.3rem;
+        color: rgb(138, 134, 126) ;
+        background: #323946;
+        border-radius: .8rem;
+        margin: .7rem 0;}
+        .contact form .input-box input{width: 49%;}
+        .contact form textarea{resize: none;}
+        .contact form .input-box input.btn{
+         margin: .5rem auto;
+        cursor: pointer;
+        background: rgb(150, 144, 144);
+        border-radius: 4rem;
+        box-shadow: 0 0 1rem rgb(5, 5, 5);
+        font-size: 1.5rem;
+        font-weight: 500;
+        width: 120px;
+        color: #323946;
+        
+        }
 

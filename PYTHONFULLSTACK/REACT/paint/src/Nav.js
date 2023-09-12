@@ -33,7 +33,7 @@ export default function Nav() {
         <a class="nav-link text-dark"  onClick={logout}>logout<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-dark" href="/Register">Register<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-dark" href="/Contact">Contact View<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-dark" href="/Color">Paint And Colors</a>

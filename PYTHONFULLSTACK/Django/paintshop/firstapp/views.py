@@ -8,11 +8,12 @@ from django.shortcuts import render,redirect
 from .serializers import UserRegisterSerializer
 from .serializers import LoginSerializer
 from .serializers import AddProductSerializer
+from .serializers import contactViewSerializer
 from .models import login
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import register,products
+from .models import register,products,contact
 
 
 
@@ -29,7 +30,7 @@ class UserRegisterSerializerAPIView(GenericAPIView):
         Phone_Number=request.data.get('Phone_Number')
         username=request.data.get('username')
         password=request.data.get('password')
-        modelfile=request.data.get('modelfile')
+        image=request.data.get('image')
         role='user'
         userstatus='0'
         if(login.objects.filter(username=username)):
@@ -42,7 +43,7 @@ class UserRegisterSerializerAPIView(GenericAPIView):
             log=serializer_login.save()
             login_id=log.id
             print(login_id)
-        serializer=self.serializer_class_register(data={'name':Name,'email':Email,'contact':Phone_Number,'log_id':login_id,'user_status':userstatus,'modelfile':modelfile})    
+        serializer=self.serializer_class_register(data={'name':Name,'email':Email,'contact':Phone_Number,'log_id':login_id,'user_status':userstatus,'image':image})    
         print(serializer)
         if serializer.is_valid():
             serializer.save()
@@ -143,5 +144,32 @@ class Update_product(GenericAPIView):
             else:
                 return Response({'data':'something went wrong','success':False},status=status.HTTP_400_BAD_REQUEST)
 
- 
-           
+
+
+class AddContact(GenericAPIView):
+    serializer_class=contactViewSerializer
+    
+    def post(self,request):
+        fname=request.data.get('fname')
+        lname=request.data.get('lname')
+        contact=request.data.get('phonenumber')
+        email=request.data.get('email')
+        message=request.data.get('message')
+        serializer=self.serializer_class(data={'fname':fname,'lname':lname,'contact':contact,'email':email,'message':message,})
+        print(serializer) 
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'data':serializer.data,'message':'updated succesfully','success':True},)
+        else:
+            return Response({'data':'something went wrong','success':False},status=status.HTTP_400_BAD_REQUEST)
+
+
+class GetContact(GenericAPIView):
+   serializer_class=contactViewSerializer
+   def get(self,request):
+      queryset=contact.objects.all()
+      if(queryset.count()>0):
+         serializer=contactViewSerializer(queryset,many=True)
+         return Response({'data':serializer.data,'message':'Your Contacts Updated','success':True},status=status.HTTP_200_OK)
+      else:
+            return Response({'data':[],'message':'no data available','success':False},status=status.HTTP_201_CREATED)

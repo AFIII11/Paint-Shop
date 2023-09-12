@@ -27,12 +27,29 @@ const submit=()=>{
     localStorage.setItem('user_data',response.data.data.user_id)
     console.log(response);
     console.log(input);
-    if(response.data.data.role=='admin'){
-      navigate("/")
-    }
-    else if(response.data.data.role=='user'){
-      navigate('/')
-    }
+    toast.success('Login Successfull', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+      setInterval(set,1000)
+      function set(){
+        if(response.data.data.role=='admin'){
+          navigate("/")
+          
+        }
+        else if(response.data.data.role=='user'){
+          navigate('/')
+        }
+      }
+
+
+     
    
   }).catch((error)=>{
     console.log(error.response.data.data);
@@ -56,7 +73,7 @@ const submit=()=>{
     <>
     <Nav></Nav>
     <div className='box'>
-      <ToastContainer toastStyle={{ backgroundColor: "crimson" }} ></ToastContainer>
+      <ToastContainer  ></ToastContainer>
       <h1>Login</h1>
       <input type="text" placeholder='Enter Your Username' name='username' onChange={inputChange}></input><br></br><br></br>
       <input  type="text" placeholder='Enter Your Password' name='password' onChange={inputChange}></input><br></br><br></br>

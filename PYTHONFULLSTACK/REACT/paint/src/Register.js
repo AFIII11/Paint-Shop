@@ -32,12 +32,7 @@ console.log(input);
         <h2>Register </h2>
       <div class="row">
         <div class="col1">
-          <h4>Firstname: </h4>
-          <h4>Lastname: </h4>
-          <h4>Email: </h4>
-          <h4>Username: </h4>
-          <h4>Password: </h4>
-          <h4>Contact: </h4>
+          
         </div>
         <div class="col2">
           <input type="text" class="one" placeholder='Enter Your Firstname' name='Name' onChange={inputChange}/>
@@ -50,7 +45,7 @@ console.log(input);
         </div>
       </div>
       <div class="col3">
-        <input className='bt' type="submit" value="Login" onClick={submit}></input>
+        <input className='bt' type="submit" value="Register" onClick={submit}></input>
 
       </div>
     </div>

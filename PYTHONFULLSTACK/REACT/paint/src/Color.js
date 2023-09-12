@@ -8,7 +8,7 @@ export default function Color() {
     <div className='container'>
         <img src={brushes} className='clr'></img>
         <center><p class="a">RED</p></center>
-    <center><p class="b">ORANGE</p></center>
+paint/src/Home.css    <center><p class="b">ORANGE</p></center>
     <center><p class="c">YELLOW</p></center>
     <center><p class="d">GREEN</p></center>
     <center><p class="e">BLUE</p></center>

@@ -11,6 +11,8 @@ path('Getproduct',views.Getproduct.as_view(),name='Getproduct'),
 path('Deleteproduct/<int:id>',views.Deleteproduct.as_view(),name='Deleteproduct'),
 path('Editproduct/<int:id>',views.Editproduct.as_view(),name='Editproduct'),
 path('Update_product/<int:id>',views.Update_product.as_view(),name='Update_product'),
+path('AddContact',views.AddContact.as_view(),name='AddContact'),
+path('GetContact',views.GetContact.as_view(),name='GetContact'),
 
 
 

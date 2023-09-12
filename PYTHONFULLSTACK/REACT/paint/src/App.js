@@ -11,6 +11,7 @@ import Form from './Form';
 import View from './View';
 import Editpaint from './Editpaint';
 import Profile from './Profile';
+import Contact from './Contact';
 
 
 
@@ -29,6 +30,7 @@ function App() {
     <Route path='/view'element={<View></View>}/>  
     <Route path='/edit/:id'element={<Editpaint/>}/>  
     <Route path='/profile'element={<Profile></Profile>}/>  
+    <Route path='/contact'element={<Contact></Contact>}/>  
     
     
       

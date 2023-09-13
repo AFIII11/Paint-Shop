@@ -13,6 +13,8 @@ path('Editproduct/<int:id>',views.Editproduct.as_view(),name='Editproduct'),
 path('Update_product/<int:id>',views.Update_product.as_view(),name='Update_product'),
 path('AddContact',views.AddContact.as_view(),name='AddContact'),
 path('GetContact',views.GetContact.as_view(),name='GetContact'),
+path('Replymessage',views.Replymessage.as_view(),name='Replymessage'),
+path('getsinglecontact/<int:id>',views.getsinglecontact.as_view(),name='getsinglecontact'),
 
 
 

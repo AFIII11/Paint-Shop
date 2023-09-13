@@ -14,6 +14,7 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import register,products,contact
+from .mail import sendmail
 
 
 
@@ -173,3 +174,19 @@ class GetContact(GenericAPIView):
          return Response({'data':serializer.data,'message':'Your Contacts Updated','success':True},status=status.HTTP_200_OK)
       else:
             return Response({'data':[],'message':'no data available','success':False},status=status.HTTP_201_CREATED)
+
+
+class Replymessage(GenericAPIView):
+    def post(self,request):
+        Reply=request.data.get('Reply')
+        Name=request.data.get('Name')
+        Contact=request.data.get('Contact')
+        Email=request.data.get('Email')
+
+        sendmail(Email,Reply)
+        return Response({'data':{'Reply':Reply,'Name':Name,'Contact':Contact,'Email':Email},'message':'Contact Registered Successfully','success':True},status=status.HTTP_201_CREATED)
+class getsinglecontact(GenericAPIView):
+    def get(self,request,id):
+      queryset=contact.objects.filter(pk=id).values()
+      return Response({'data':queryset,'message':'Edited  Successfully','success':False},status=status.HTTP_200_OK)
+   

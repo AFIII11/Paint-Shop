@@ -9,7 +9,7 @@ export default function Fec() {
   return (
     <div class="container">
         <Nav></Nav>
-        <div class="card-deck">
+        <div class="card-deck hv">
           <div class="card">
             <center><img src={house}  class="card-img-top" alt="..."></img></center>
             <div class="card-body">

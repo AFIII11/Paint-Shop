@@ -1,0 +1,15 @@
+
+.form{
+    padding: 30px;
+}
+.space{
+    margin-bottom: 20px;
+}
+.size{
+    width: 430px !important;
+    border: black solid 2px;
+}
+.card-deck{
+    justify-content: space-around;
+    gap: 50px;
+}

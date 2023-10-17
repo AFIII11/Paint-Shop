@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import Nav from './Nav'
 import './Form.css';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Form() {
   const [input,setInput] =useState([])
     
@@ -14,6 +17,17 @@ export default function Form() {
       const submit=()=>{
        axios.post('http://127.0.0.1:8000/api/AddProduct',input).then((response)=>{
         console.log(response);
+        toast('Added Successfully!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            
+            });
        }).catch((error)=>{
         console.log(error);
        })
@@ -23,7 +37,7 @@ export default function Form() {
         <div class="row justify-content-center boxm">
             <Nav></Nav>
                   <form method="post" action="{% url 'Adddata' %}">
-                    
+                    <ToastContainer toastStyle={{ backgroundColor: "green" }} />
                     <div class="form-row mt-5">
                         <div class="form-group col-md-6">
                             <label> NAME</label>

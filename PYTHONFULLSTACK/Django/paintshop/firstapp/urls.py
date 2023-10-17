@@ -15,6 +15,7 @@ path('AddContact',views.AddContact.as_view(),name='AddContact'),
 path('GetContact',views.GetContact.as_view(),name='GetContact'),
 path('Replymessage',views.Replymessage.as_view(),name='Replymessage'),
 path('getsinglecontact/<int:id>',views.getsinglecontact.as_view(),name='getsinglecontact'),
+path('SearchProducts/<char>',views.SearchProducts.as_view(),name='SearchProducts'),
 
 
 

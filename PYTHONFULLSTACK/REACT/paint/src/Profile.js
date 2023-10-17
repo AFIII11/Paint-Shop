@@ -8,7 +8,7 @@ export default function Profile() {
     const[input,setInput]=useState("")
     console.log(state);
     const id=state
-    useEffect
+    
   return (
     <div>
       <Nav></Nav>

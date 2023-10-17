@@ -189,4 +189,12 @@ class getsinglecontact(GenericAPIView):
     def get(self,request,id):
       queryset=contact.objects.filter(pk=id).values()
       return Response({'data':queryset,'message':'Edited  Successfully','success':False},status=status.HTTP_200_OK)
-   
+
+class SearchProducts(GenericAPIView):
+    def get(self, request, char, *args, **kwargs):         
+            queryset = products.objects.filter(brands=char).values()
+            if queryset.exists():
+                return Response({'data': queryset, 'message': 'Products found for brand: {}'.format(char), 'success': True}, status=status.HTTP_200_OK)
+            else:
+                return Response({'data': [], 'message': 'No products found for brand: {}'.format(char), 'success': True}, status=status.HTTP_200_OK)
+        

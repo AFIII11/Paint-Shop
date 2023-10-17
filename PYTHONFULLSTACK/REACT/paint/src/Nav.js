@@ -30,7 +30,7 @@ export default function Nav() {
         <a class="nav-link text-dark" href="/">Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-dark"  onClick={logout}>logout<span class="sr-only">(current)</span></a>
+        <a class="nav-link text-dark"  onClick={logout}>Logout<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link text-dark" href="/Contact">Contact View<span class="sr-only">(current)</span></a>
